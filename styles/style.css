@@ -1,4 +1,4 @@
-/* Основные стили для страницы */
+/* header */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,66 +12,133 @@ header {
     padding: 1rem;
     text-align: center;
     position: relative;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    height: 100px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.logo img {
+    width: 105px;
+    height: 105px;
+    border-radius: 20%;
+}
+
+/* Desctop Version*/
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    background-color: #333;
+
+}
+
+.burger_inside{
+   margin-right: 35px;
+}
 nav ul li {
     margin: 0 15px;
+    padding: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
     display: block;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 nav ul li a:hover {
     background-color: #575757;
 }
-
-
-#nav-links {
+header h1 {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
 }
 
-/* Бургерное меню */
 .burger-menu {
-    font-size: 30px;
+    font-size: 50px;
     cursor: pointer;
     color: white;
     display: none;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+
+}
+
+/*Footer*/
+.footer-section {
+    background-color: #deded5;
+}
+
+.footer-heading {
+    letter-spacing: 2px;
+    color: #818963;
+}
+
+.footer-link {
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #333; /* Можно изменить цвет при наведении */
+}
+
+.footer-table {
+    color: #4f4f4f;
+    border-color: #666;
+}
+
+.copyright-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #4f4f4f;
 }
 
 
+/* Mobile Version/*/
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
     .burger-menu {
         display: block;
+        justify-content: flex-start;
+        list-style: none;
+    }
+    header h1 {
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+        color: white;
     }
 
-    #nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        width: 100%;
-    }
-
-
-    #nav-links.open {
+    .nav-links.open {
         display: flex;
+        position: fixed;
+        right: 0;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 75px;
+        border-radius: 20%;
+    }
+    .main-content.menu-open {
+        margin-top: 288px;
     }
 }
+
+

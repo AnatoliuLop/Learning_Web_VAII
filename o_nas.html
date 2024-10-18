@@ -8,23 +8,37 @@
 </head>
 <body>
 <header>
-    <h1>Naše kurzy</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Hlavná</a></li>
-            <li><a href="o_nas.html">O nás</a></li>
-            <li><a href="kurzy.html">Kurzy</a></li>
-            <li><a href="auta.html">Naše autá</a></li>
-            <li><a href="skusky.html">Skúšky</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/Logo.png" alt="Logo" />
+        </div>
+
+        <h1>Naše kurzy</h1>
+
+        <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+        <div class="burger_inside">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Hlavná</a></li>
+                    <li><a href="o_nas.html">O nás</a></li>
+                    <li><a href="kurzy.html">Kurzy</a> </li>
+                    <li><a href="auta.html">Naše autá</a></li>
+                    <li><a href="skusky.html">Skúšky</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
+
 <main>
-    <section>
-        <h2>Dostupné kurzy</h2>
-        <p>Ponúkame kurzy na vodičské preukazy skupín A, B, C a D.</p>
-    </section>
+
+    <div class="main-content">
+        <section>
+            <h2>Autá pre výcvik</h2>
+            <p>Naša flotila pozostáva z moderných a bezpečných vozidiel.</p>
+        </section>
+    </div>
 </main>
 <footer>
     <p>&copy; 2024 Autoškola PRO</p>
