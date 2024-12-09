@@ -4,17 +4,16 @@ require 'php/db_connect.php'; // Подключение к базе данных
 require 'header.php'; // Хедер
 ?>
 
-<main class="kurzy-content">
-    <div class="auta-header">
+<main class="auta-content">
+    <div>
+        <a href="add_entity.php?type=course" class="btn btn-primary" style="float: right; margin: 10px;">Pridať kurz</a>
+
         <h2 class="stranka-title">Naše kurzy</h2>
         <!-- Кнопка перенаправления на формуляр -->
-        <a href="add_entity.php?type=course" class="btn btn-primary" style="float: right; margin: 10px;">Pridať kurz</a>
         <!-- Кнопка для добавления автомобиля -->
     </div>
 
-    <div class="">
 
-    </div>
 
 
     <div class="courses-container">

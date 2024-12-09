@@ -82,6 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 require 'header.php'; // Подключаем хедер
 ?>
 <main class="edit-content">
+
     <h2>Upraviť <?php echo ucfirst($type); ?></h2>
     <form action="" method="POST" enctype="multipart/form-data" class="styled-form">
         <?php if ($type === 'course'): ?>

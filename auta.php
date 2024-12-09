@@ -5,7 +5,7 @@ require 'header.php'; // Подключение хедера
 ?>
 
 <main class="auta-content">
-    <div class="auta-header">
+    <div>
         <a href="add_entity.php?type=car" class="btn btn-primary" style="float: right; margin: 10px;">Pridať auto</a>
 
         <h2 class="stranka-title">Naše Auta</h2>

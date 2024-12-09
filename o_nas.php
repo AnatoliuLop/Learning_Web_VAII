@@ -5,10 +5,10 @@ require 'header.php'; // Подключение хедера
 ?>
 
 <main class="main-content">
-    <a href="add_entity.php?type=instructor" class="btn btn-primary" style="float: right; margin: 10px;">Pridať inštruktora</a>
-
+    <div>
+        <a href="add_entity.php?type=instructor" class="btn btn-primary" style="float: right; margin: 10px;">Pridať inštruktora</a>
         <h2 class="stranka-title">O nás</h2>
-
+    </div>
         <p>Sme moderná autoškola, ktorá kladie dôraz na individuálny prístup ku každému študentovi.</p>
 
     <section class="about-team">

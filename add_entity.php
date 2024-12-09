@@ -54,7 +54,12 @@ switch ($type) {
                 <input type="number" id="year" name="year" required>
 
                 <label for="fuel_type">Typ paliva:</label>
-                <input type="text" id="fuel_type" name="fuel_type" required>
+                  <select id="fuel_type" name="fuel_type" required>
+                <option value="Benzín">Benzín</option>
+                <option value="Dizel">Dizel</option>
+                <option value="Plyn">Plyn</option>
+                <option value="Elektro">Elektro</option>
+            </select>
 
                 <label for="license_plate">Evidenčné číslo:</label>
                 <input type="text" id="license_plate" name="license_plate" required>
@@ -82,7 +87,13 @@ switch ($type) {
                 <input type="text" id="phone" name="phone" required>
 
                 <label for="specialization">Špecializácia:</label>
-                <input type="text" id="specialization" name="specialization" required>
+                <select id="specialization" name="specialization" required>
+                <option value="Skupina A">Skupina A</option>
+                <option value="Skupina B">Skupina B</option>
+                <option value="Skupina A, B">Skupina A, B</option>
+                <option value="Skupina B,C">Skupina B,C</option>
+                <option value="Skupina A,B,C">Skupina A,B,C</option>
+            </select>
             </fieldset>
             <fieldset>
                 <legend>Fotka inštruktora</legend>
@@ -93,7 +104,7 @@ switch ($type) {
         break;
 
     default:
-        // Перенаправление, если параметр некорректен
+
         header('Location: index.php');
         exit();
 }
@@ -102,11 +113,14 @@ switch ($type) {
 
 <main class="add-entity-content">
     <h2><?php echo $formTitle; ?></h2>
-    <form action="process_add_entity.php?type=<?php echo $type; ?>" method="POST" enctype="multipart/form-data" class="styled-form">
-        <?php echo $formContent; ?>
+    <form action="process_add_entity.php?type=<?php echo $type; ?>" method="POST" enctype="multipart/form-data" class="styled-form add-form">
+
+    <?php echo $formContent; ?>
         <button type="submit" class="submit-button">Pridať</button>
     </form>
 </main>
+
+
 
 <?php
 require 'footer.php'; // Подключаем футер

@@ -13,14 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $duration = $_POST['duration'];
             $price = $_POST['price'];
             $photoPath = '';
-
             if (!empty($_FILES['photo']['tmp_name'])) {
                 if (!file_exists('uploads/courses/')) {
                     mkdir('uploads/courses/', 0777, true);
                 }
                 $photoPath = 'uploads/courses/' . basename($_FILES['photo']['name']);
                 if (!move_uploaded_file($_FILES['photo']['tmp_name'], $photoPath)) {
-                    die("Ошибка загрузки фото для курса.");
+                    die("Error upload  photo for course.");
                 }
             }
 
@@ -37,14 +36,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fuelType = $_POST['fuel_type'];
             $licensePlate = $_POST['license_plate'];
             $photoPath = '';
-
             if (!empty($_FILES['photo']['tmp_name'])) {
                 if (!file_exists('uploads/cars/')) {
                     mkdir('uploads/cars/', 0777, true);
                 }
                 $photoPath = 'uploads/cars/' . basename($_FILES['photo']['name']);
                 if (!move_uploaded_file($_FILES['photo']['tmp_name'], $photoPath)) {
-                    die("Ошибка загрузки фото для автомобиля.");
+                    die("Error upload  photo for car.");
                 }
             }
 
@@ -67,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
                 $photoPath = 'uploads/instructors/' . basename($_FILES['photo']['name']);
                 if (!move_uploaded_file($_FILES['photo']['tmp_name'], $photoPath)) {
-                    die("Ошибка загрузки фото для инструктора.");
+                    die("Error upload  photo for instructor.");
                 }
             }
 
@@ -80,4 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: index.php');
             exit();
     }
+
 }
+

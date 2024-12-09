@@ -516,19 +516,7 @@ td {
     color: #fff;
 }
 
-/*Images For Carousel;*/
 
-/*.carousel-item-1 {*/
-/*    background-image: url('images/photo_of_team.jpg');*/
-/*}*/
-
-/*.carousel-item-2 {*/
-/*    background-image: url('images/photo_of_team.jpg');*/
-/*}*/
-
-/*.carousel-item-3 {*/
-/*    background-image: url('images/photo_of_team.jpg');*/
-/*}*/
 .carousel-item {
     height: 100vh;
     background-size: auto 100%;
@@ -843,14 +831,6 @@ td {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
-}
-
-
-.kurzy-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
 }
 
 .stranka-title {
